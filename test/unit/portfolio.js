@@ -28,7 +28,7 @@ describe('#add', function(){
       expect(port1.stocks).to.have.length(2);
       expect(port1.stocks[0]).to.be.instanceof(Stock);
       expect(port1.stocks[0].count).to.equal(75);
-      expect(port1.stocks[2].count).to.equal(35);
+      expect(port1.stocks[1].count).to.equal(35);
     });
 });
 });
