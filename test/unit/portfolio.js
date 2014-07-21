@@ -31,4 +31,19 @@ describe('#add', function(){
       expect(port1.stocks[1].count).to.equal(35);
     });
 });
+describe('#del', function(){
+  it('should delete stock shares', function(){
+      var port1 =  new Portfolio('Tech Portfolio');
+      port1.add('aapl', 50);
+      port1.add('msft', 35);
+      
+      port1.del('aapl', 10);
+      port1.del('msft', 40);
+      port1.del('aapl', 20);
+
+      expect(port1.stocks).to.have.length(1);
+      expect(port1.stocks[0].count).to.equal(20);
+
+   });
+  });
 });
